@@ -1,3 +1,7 @@
+## LINK DE LA DEMO (DESPLIEGUE EN VERCEL)
+
+https://prueba-tecnica-2-bice.vercel.app/
+
 ## INSTALACION
 
 - Entrar al directorio en el que se desea guardar el proyecto y ejecutar el siguiente comando en la terminal
