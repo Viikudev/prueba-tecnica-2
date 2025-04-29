@@ -52,7 +52,7 @@ export default function Home() {
       </header>
 
       <main className='max-xl:flex max-xl:flex-col xl:flex gap-10 items-start '>
-        <aside className='max-sm:w-full sm:max-md:w-4/5 md:max-xl:w-4/5 self-center xl:text-xl flex flex-col justify-around w-1/4 border rounded-xl p-4 gap-4'>
+        <aside className='max-sm:w-full sm:max-md:w-4/5 md:max-xl:w-4/5 self-center xl:text-xl flex flex-col justify-around w-1/4 border rounded-xl p-4 gap-4 min-xl:self-start'>
           <h2 className='font-bold'>Crear Producto</h2>
           <ProductForm />
         </aside>
