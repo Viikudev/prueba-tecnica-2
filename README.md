@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## INSTALACION
 
-## Getting Started
-
-First, run the development server:
-
+- Entrar al directorio en el que se desea guardar el proyecto y ejecutar el siguiente comando en la terminal
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Viikudev/prueba-tecnica-2.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Nota: Instalar Node en caso de no estar instalado https://nodejs.org/en
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Ingresar a la carpeta del proyecto copiado y ejecutar el comando:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Ingresar a la url que devuelve la terminal para visualizar la aplicacion en el navegador. Usualmente es http://localhost:3000
 
-## Learn More
+- Para realizar los test se debe ejecutar el siguiente comando en la consola:
+```bash
+npm test
+```
 
-To learn more about Next.js, take a look at the following resources:
+## DECISIONES TECNICAS DESTACABLES
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Contexto global utilizando Context API
+Para compartir los datos alojados en el localStorage con los distintos componentes sin provocar lo que se conoce como "Prop Drilling", se creo un
+contexto el cual contiene los datos de los productos almacenados, luego se envuelve la aplicacion con un provider para mantener el contexto tanto en
+el formulario como en la lista de productos.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Uso de Shadcn
+Shadcn es una libreria de componentes que agiliza es desarrollo debido a que posee componentes sumamente utiles para gran variedad de aplicaciones,
+para este caso lo mas importante fue utilizar el componente de Form, el cual se utiliza junto con una libreria muy utilizada llamada React Hook Forms,
+gracias a esto se pueden crear formularios robustos que ademas se actualizan en tiempo real para informarle al usuario si esta introduciendo datos correctamente
 
-## Deploy on Vercel
+- Hook personalizado "useProducts"
+Dentro del contexto se creo un hook para trabajar con los productos de una manera mas legible, este hook nos permite modificar el estado de los productos ya sea,
+agregando un nuevo producto (addProducto), eliminando un producto de la lista (deleteProduct) o simplemente obteniendo la lista de productos para realizar cualquier
+otra accion necesaria
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## POSIBLES MEJORAS
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Agregar loader
+Agregar una pantalla que le indique al usuario que se estan obteniendo los datos para mostrarlos en pantalla, esto ayuda a la retencion del usuario y que no piense
+que la aplicacion se ha quedado estancada. Un loader muy recomendable para galerias es el Esqueleto, que proporciona un template de como se veria la aplicacion con
+los datos cargados
+
