@@ -36,7 +36,7 @@ function ProductCard({ name, quantity, code, description, date }: Props) {
     <>
       <div className='flex justify-between'>
         <div className='font-bold'>{name}</div>
-        <div className='flex items-center justify-center border text-xs font-bold rounded-full px-4 w-25'>
+        <div className='flex items-center justify-center border text-xs font-bold rounded-full px-4 w-30'>
           {quantity} unidades
         </div>
       </div>

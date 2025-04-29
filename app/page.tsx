@@ -56,7 +56,7 @@ export default function Home() {
           <h2 className='font-bold'>Crear Producto</h2>
           <ProductForm />
         </aside>
-        <section className='max-sm:w-full flex flex-col gap-10 w-4/5 self-center'>
+        <section className='max-sm:w-full flex flex-col gap-10 w-4/5'>
           <div className='flex gap-4'>
             <Input
               placeholder='Buscar por nombre...'
@@ -75,7 +75,7 @@ export default function Home() {
               </SelectContent>
             </Select>
           </div>
-          <ul className='flex justify-center flex-wrap gap-10 gap-x-30'>
+          <ul className='flex flex-wrap gap-10 gap-x-30'>
             {sortedProducts
               .filter((product) =>
                 product.name.toLowerCase().includes(filter.toLowerCase())
